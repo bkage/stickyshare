@@ -4,8 +4,7 @@
 
 
 module.exports = function(app, express, path, mysqlConnection){
-    //static files
-    app.use('/static', express.static(path.resolve('/../app/static')));
+    
 
 
     //serve files

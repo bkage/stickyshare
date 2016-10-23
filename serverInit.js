@@ -12,7 +12,8 @@ var portfinder  = require('portfinder');
 var colors      = require('colors');
 var mysql       = require('mysql');
 
-
+//serve static files
+app.use('/static', express.static(path.join(__dirname, '/app/static')));
 
 //connect to sql DB
 var mysqlConnection = require(__dirname + '/app/server/dbConnect.js')(mysql, colors);

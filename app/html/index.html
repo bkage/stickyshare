@@ -5,16 +5,16 @@
     <title>StickyShare</title>
 </head>
 <body>
-    <h1>Welcome to StickyShare!</h1>
-    <p id="users"></p>
+    <div id="app">
+        <h1>Welcome to StickyShare!</h1>
+        <p id="users">{{userAdmin[0].username}}</p>
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+    <script src="/static/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/static/bower_components/vue/dist/vue.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-        socket.on('usernames', function(msg){
-           $('#users').text(msg[0].username);
-        });
-    </script>
+    <script src="/static/js/app.js"></script>
 </body>
 </html>
