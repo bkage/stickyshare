@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>StickyShare</title>
+    <link rel="stylesheet" href="/static/css/global.css">
 </head>
 <body>
     <div id="app">
         <h1>Welcome to StickyShare!</h1>
-        <p id="users">{{userAdmin[0].username}}</p>
+        <p><strong>Working:</strong> {{dummyData}}</p>
+        <p><strong>Userlist:</strong></p>
+        <ul>
+            <user-list-single v-for="singleUser in userList" v-bind:username="singleUser.username"></user-list-single>
+        </ul>
+
+        <div class="login-area">
+            <p id="login-message"></p>
+            <single-input frontname="Username" fieldname="username" type="text"></single-input>
+            <single-input frontname="Password" fieldname="password" type="text"></single-input>
+
+            <button type="submit">Login</button>
+        </div>
     </div>
 
 
-
+    <!-- Libraries -->
     <script src="/static/bower_components/jquery/dist/jquery.js"></script>
     <script src="/static/bower_components/vue/dist/vue.js"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/static/js/app.js"></script>
+
+    <!-- Handlers -->
+    <script src="/static/js/socketApp-compiled.js"></script>
+    <script src="/static/js/vueComponents-compiled.js"></script>
+    <script src="/static/js/vueApp-compiled.js"></script>
+
 </body>
 </html>

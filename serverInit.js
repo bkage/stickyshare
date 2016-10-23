@@ -35,6 +35,7 @@ io.on('connection', function(socket){
        socket.emit('usernames', response);
     });
 
-
-
-});
+    socket.on('disconnect', function(){
+        console.log(colors.red('User disconnected'));
+    });
+})
