@@ -3,13 +3,15 @@
  */
 
 
-module.exports = function(app, express){
+module.exports = function(app, express, path, mysqlConnection){
     //static files
-    app.use('/static', express.static(__dirname + '/app/static'));
+    app.use('/static', express.static(path.resolve('/../app/static')));
 
 
     //serve files
     app.get('/', function (req, res) {
-        res.sendFile(path.join(__dirname + '/app/html/index.html'));
+        res.sendFile(path.resolve('app/html/index.html'));
     });
+
+
 };

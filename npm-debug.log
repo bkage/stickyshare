@@ -7,7 +7,7 @@
 6 silly lifecycle stickyshare@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle stickyshare@1.0.0~start: stickyshare@1.0.0
 8 verbose lifecycle stickyshare@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle stickyshare@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/BernardKlatkaSquiz/site/others/inside/stickyShare/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+9 verbose lifecycle stickyshare@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/BernardKlatkaSquiz/site/others/inside/stickyShare/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/mysql/bin
 10 verbose lifecycle stickyshare@1.0.0~start: CWD: /Users/BernardKlatkaSquiz/site/others/inside/stickyShare
 11 silly lifecycle stickyshare@1.0.0~start: Args: [ '-c', 'node serverInit.js' ]
 12 silly lifecycle stickyshare@1.0.0~start: Returned: code: 1  signal: null
