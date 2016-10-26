@@ -6,6 +6,7 @@
 var vueApp = new Vue({
     el: '#app',
     data: {
+        loggedIn: false,
         dummyData: true,
         userList: [{username:'hello'}],
     }

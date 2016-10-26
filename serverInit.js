@@ -11,6 +11,7 @@ var path        = require('path');
 var portfinder  = require('portfinder');
 var colors      = require('colors');
 var mysql       = require('mysql');
+var md5         = require('md5');
 
 //serve static files
 app.use('/static', express.static(path.join(__dirname, '/app/static')));
@@ -37,5 +38,18 @@ io.on('connection', function(socket){
 
     socket.on('disconnect', function(){
         console.log(colors.red('User disconnected'));
+    });
+
+    socket.on('login attempt', function(data, callback){
+        helperMethods.mysqlQuery("SELECT * FROM users WHERE username='" + data.username + "'", function(response){
+            if(md5(data.password) === response[0].password){
+                callback(true);
+            }
+            else{
+                callback(false);
+            }
+        });
+
+
     });
 })

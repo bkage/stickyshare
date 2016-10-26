@@ -10,9 +10,6 @@ module.exports = function(mysqlConnection){
             if(err) throw err;
             fn(results);
         });
-
-
-
     }
   };
 };

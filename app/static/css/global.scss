@@ -1,10 +1,47 @@
 $primary-color:#3f3f3f;
+*{
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
 body{
   background-color:$primary-color;
   color:#fff;
   font-family:'Arial', sans-serif;
 }
-
+a{
+  cursor:pointer;
+  display:block;
+  color:inherit;
+  text-decoration: none;
+}
 .form-group{
   padding:15px;
+  label{
+    display:block;
+    font-weight:700;
+  }
+}
+.form-input{
+  padding:5px 15px;
+}
+.login-area{
+  padding:15px;
+  border:1px solid #fff;
+  max-width:400px;
+  display:block;
+  margin:0 auto;
+  text-align:center;
+  button{
+    display:block;
+    margin:0 auto;
+    padding:10px 25px;
+    background-color:#fff;
+    color: $primary-color;
+    border:1px solid #fff;
+    &:hover{
+      color:#fff;
+      background-color:$primary-color;
+    }
+  }
 }

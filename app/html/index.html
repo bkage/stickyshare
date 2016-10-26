@@ -9,18 +9,14 @@
     <div id="app">
         <h1>Welcome to StickyShare!</h1>
         <p><strong>Working:</strong> {{dummyData}}</p>
+        <p><strong>Logged: </strong>{{loggedIn}}</p>
         <p><strong>Userlist:</strong></p>
         <ul>
             <user-list-single v-for="singleUser in userList" v-bind:username="singleUser.username"></user-list-single>
         </ul>
 
-        <div class="login-area">
-            <p id="login-message"></p>
-            <single-input frontname="Username" fieldname="username" type="text"></single-input>
-            <single-input frontname="Password" fieldname="password" type="text"></single-input>
+        <login-area></login-area>
 
-            <button type="submit">Login</button>
-        </div>
     </div>
 
 
